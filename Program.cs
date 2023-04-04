@@ -5,7 +5,8 @@ namespace EmployeeWage
     internal class Program
     {
         const int wagePerHour = 20;
-    
+        const int presentForFullDay = 1; 
+        const int presentForHalflDay = 2;
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Employee Wage Program");
@@ -13,17 +14,17 @@ namespace EmployeeWage
             int check=rnd.Next(0,3);
             int perDayhour = 0;
 
-            switch (check) 
+            if (check== presentForFullDay) 
             {
-                case 0:
-                       perDayhour = 0;
-                    break;
-                case 1:
-                       perDayhour = 8;
-                    break;
-                case 2:
-                       perDayhour = 4;
-                    break;   
+                perDayhour = 8;
+            }
+            else if (check == presentForHalflDay)
+            {
+                perDayhour = 4;
+            }
+            else 
+            {
+              perDayhour =0;    
             }
             int dailyWage = perDayhour * wagePerHour;
             Console.WriteLine($"Employee Per Day Wage :{dailyWage}$");
