@@ -16,8 +16,7 @@ namespace EmployeeWage
             int totalDay = 0;
             Random rnd = new Random();
 
-            while (totalDay < maxWorkingDay && totalHour<maxHour)
-            for (int i = 0; i < maxWorkingDay; i++) 
+            while (totalDay < maxWorkingDay && totalHour<maxHour)           
             {
                     totalDay++;
                 int check = rnd.Next(0, 3);
